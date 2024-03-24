@@ -46,18 +46,20 @@
   background-size: cover;
 }
 @media screen and (max-width: 750px) {
-  #boutique .banier div > :nth-child(2) {
-    display: none;
+  #boutique .banier div.imgBanier {
+    display: none !important;
   }
-  #boutique .banier button {
-    width: 100px;
+  #boutique .banier div p button {
+    width: 300px;
+    height: 50px;
+    font-size: small;
   }
 }
-#boutique .banier button {
+#boutique .banier div p button {
   font-weight: 600 !important;
   width: 200px;
 }
-#boutique .banier .startCourse:hover .arrow {
+#boutique .banier .startCourse:hover span.arrows {
   transition: all ease-out 80ms;
   position: relative;
   transform-origin: left center;
