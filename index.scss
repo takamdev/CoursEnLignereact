@@ -1,0 +1,91 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,700;1,900&display=swap');
+*,*::after,*::before{
+   font-family: "Roboto", sans-serif;
+   font-style: normal;
+}
+
+
+#navbar {
+
+   ul{
+    .nav-item{
+        .nav-link {
+            font-size: 20px;
+            position: relative;
+            display: flex;
+            align-items: end;
+            font-weight: bolder;
+            transition: all ease-out 0.5s;
+            &:hover {
+                color: blueviolet;
+              
+            }
+         }
+         .active {
+            color: blueviolet;
+         }
+
+         &:nth-child(1),&:nth-child(2){
+            .nav-link {
+               &:hover{
+                &::after {
+                    position: absolute;
+                    content: "";
+                    background-color: blueviolet;
+                    height: 3px;
+                    width: 100%;    
+                 }
+               }
+            }
+           
+         }
+    }
+    
+   }
+        
+  
+  
+   form {
+      position: relative;
+      input {
+         padding-left: 30px;
+      }
+      .icoSearch {
+         z-index: 1000;
+         position: absolute;
+         left: 10px;
+         top: 10px;
+         bottom: 10px;
+         cursor: pointer;
+      }
+   }
+}
+
+#boutique{
+   .banier{
+      background-image: url("/images/Hero BG.png");
+     background-repeat: no-repeat;
+      background-size: cover;
+       @media screen and (max-width:750px){
+         div>:nth-child(2){
+            display: none;
+         }
+         button{
+         width:100px;
+            
+         }
+       }
+      button{
+         font-weight: 600 !important;
+         width:200px;
+      }
+      .startCourse:hover .arrow{
+         transition: all ease-out 80ms;
+         position: relative;
+         transform-origin: left center;
+             transform: scaleX(1.7);
+             
+      }
+   }
+}
