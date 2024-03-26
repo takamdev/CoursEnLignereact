@@ -1,16 +1,15 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,700;1,900&display=swap');
-*,*::after,*::before{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,700;1,900&display=swap");
+*,
+*::after,
+*::before {
    font-family: "Roboto", sans-serif;
    font-style: normal;
 }
 
-
 #navbar {
-
-   ul{
-    .nav-item{
-        .nav-link {
+   ul {
+      .nav-item {
+         .nav-link {
             font-size: 20px;
             position: relative;
             display: flex;
@@ -18,34 +17,30 @@
             font-weight: bolder;
             transition: all ease-out 0.5s;
             &:hover {
-                color: blueviolet;
-              
+               color: blueviolet;
             }
          }
          .active {
             color: blueviolet;
          }
 
-         &:nth-child(1),&:nth-child(2){
+         &:nth-child(1),
+         &:nth-child(2) {
             .nav-link {
-               &:hover{
-                &::after {
-                    position: absolute;
-                    content: "";
-                    background-color: blueviolet;
-                    height: 3px;
-                    width: 100%;    
-                 }
+               &:hover {
+                  &::after {
+                     position: absolute;
+                     content: "";
+                     background-color: blueviolet;
+                     height: 3px;
+                     width: 100%;
+                  }
                }
             }
-           
          }
-    }
-    
+      }
    }
-        
-  
-  
+
    form {
       position: relative;
       input {
@@ -62,32 +57,110 @@
    }
 }
 
-#boutique{
-   .banier{
+#boutique {
+   div.iconeRef1,
+   div.iconeRef2 {
+      .icon {
+         color: rgb(0, 119, 255);
+         transform: scale(5);
+         margin-bottom: 10px;
+      }
+      @media screen and (max-width: 600px) {
+         p {
+            margin-top: 20px;
+         }
+      }
+   }
+   div.iconeRef2 {
+      p {
+         position: relative;
+         padding: 30px;
+      }
+      p span {
+         position: absolute;
+         top: 10px;
+         margin-left: 50px !important;
+      }
+   }
+
+   .banier1Boutique {
       background-image: url("/images/Hero BG.png");
-     background-repeat: no-repeat;
+      background-repeat: no-repeat;
       background-size: cover;
-       @media screen and (max-width:750px){
-         div.imgBanier{
+      @media screen and (max-width: 750px) {
+         div.imgBanier {
             display: none !important;
          }
-        div p button{
-         width:300px;
-         height: 50px;
-         font-size: small;
-            
+         div p button {
+            width: 300px;
+            height: 50px;
+            font-size: small;
          }
-       }
-       div p button{
-         font-weight: 600 !important;
-         width:200px;
       }
-      .startCourse:hover span.arrows{
+      div p button {
+         font-weight: 600 !important;
+         width: 200px;
+      }
+      .startCourse:hover span.arrows {
          transition: all ease-out 80ms;
          position: relative;
          transform-origin: left center;
-             transform: scaleX(1.7);
-             
+         transform: scaleX(1.7);
       }
+   }
+
+   .banier2Boutique {
+      padding-top: 10%;
+      height: 400px;
+      background-image: url(/images/HomeBCover.jpg) !important;
+      background-size: cover;
+      background-repeat: no-repeat;
+      form {
+         height: 50px;
+         position: relative;
+         input {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+         }
+         button {
+            height: 50px;
+            position: absolute;
+            right: 0;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+         }
+      }
+   }
+}
+
+#ListCours {
+   div.banier1ListCours {
+      height: 300px;
+      background-image: url(/public/images/ccna1.jpg);
+      background-size: cover;
+   }
+}
+
+#formateurs {
+   div.banier1Formateurs {
+      height: 300px;
+      background-image: url(/public/images/ccna12.jpg);
+      background-size: cover;
+   }
+   div.banier2Formateurs {
+      height: 300px;
+      background-color: rgba(233, 232, 226, 0.774);
+      img{
+         @media screen and (max-width:700px) {
+            display: none;
+         }
+      }
+   }
+}
+
+#blog{
+   button{
+     position: relative;
+     right: 0;
    }
 }

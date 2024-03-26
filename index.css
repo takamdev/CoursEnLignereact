@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,700;1,900&display=swap");
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   font-family: "Roboto", sans-serif;
   font-style: normal;
 }
@@ -40,28 +42,97 @@
   cursor: pointer;
 }
 
-#boutique .banier {
+#boutique div.iconeRef1 .icon,
+#boutique div.iconeRef2 .icon {
+  color: rgb(0, 119, 255);
+  transform: scale(5);
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 600px) {
+  #boutique div.iconeRef1 p,
+  #boutique div.iconeRef2 p {
+    margin-top: 20px;
+  }
+}
+#boutique div.iconeRef2 p {
+  position: relative;
+  padding: 30px;
+}
+#boutique div.iconeRef2 p span {
+  position: absolute;
+  top: 10px;
+  margin-left: 50px !important;
+}
+#boutique .banier1Boutique {
   background-image: url("/images/Hero BG.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media screen and (max-width: 750px) {
-  #boutique .banier div.imgBanier {
+  #boutique .banier1Boutique div.imgBanier {
     display: none !important;
   }
-  #boutique .banier div p button {
+  #boutique .banier1Boutique div p button {
     width: 300px;
     height: 50px;
     font-size: small;
   }
 }
-#boutique .banier div p button {
+#boutique .banier1Boutique div p button {
   font-weight: 600 !important;
   width: 200px;
 }
-#boutique .banier .startCourse:hover span.arrows {
+#boutique .banier1Boutique .startCourse:hover span.arrows {
   transition: all ease-out 80ms;
   position: relative;
   transform-origin: left center;
   transform: scaleX(1.7);
+}
+#boutique .banier2Boutique {
+  padding-top: 10%;
+  height: 400px;
+  background-image: url(/images/HomeBCover.jpg) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#boutique .banier2Boutique form {
+  height: 50px;
+  position: relative;
+}
+#boutique .banier2Boutique form input {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#boutique .banier2Boutique form button {
+  height: 50px;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#ListCours div.banier1ListCours {
+  height: 300px;
+  background-image: url(/public/images/ccna1.jpg);
+  background-size: cover;
+}
+
+#formateurs div.banier1Formateurs {
+  height: 300px;
+  background-image: url(/public/images/ccna12.jpg);
+  background-size: cover;
+}
+#formateurs div.banier2Formateurs {
+  height: 300px;
+  background-color: rgba(233, 232, 226, 0.774);
+}
+@media screen and (max-width: 700px) {
+  #formateurs div.banier2Formateurs img {
+    display: none;
+  }
+}
+
+#blog button {
+  position: relative;
+  right: 0;
 }/*# sourceMappingURL=index.css.map */
