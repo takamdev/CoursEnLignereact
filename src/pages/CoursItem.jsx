@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
-
+import { useNavigate  } from 'react-router-dom';
 function CoursItem() {
    const { id } = useParams();
    const [hide, setHide] = useState(true);
    const [signe, setSigne] = useState("+");
    const [label, setLabel] = useState("lire plus");
    const [youbLink , setYoubLink] = useState('')
+   const navigateTo = useNavigate()
      useEffect(()=>{
       let video = document.querySelector('.videoYoutube').getAttribute("src")
       let indexDeFin = video.lastIndexOf('?')
@@ -27,7 +28,7 @@ function CoursItem() {
    };
 
    function redirection(){
-      window.location.href =`/coursItem/coursItemItem/${id}`
+      navigateTo(`/coursItem/coursItemItem/${id}`)
    }
 
    function copyToClipboard(){
