@@ -1,10 +1,12 @@
 import React from "react";
-
+import { useNavigate  } from 'react-router-dom';
 import "./cart.css";
 function Card({produit}) {
+const navigateTo = useNavigate();
 
 function redirection(){
-   window.location.href=`/coursItem/${produit.id}`
+   navigateTo(`/coursItem/${produit.id}`);
+
 }
 
 
