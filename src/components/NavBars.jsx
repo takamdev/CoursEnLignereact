@@ -36,7 +36,7 @@ function NavBars() {
           <a className="nav-link" href="#"><i style={{color:"#0b5ed7"}} className="fa-solid fa-cart-shopping"></i>(<span className='count'>0</span>)</a>
         </li>
         <li className="nav-item">
-          <img className="nav-link" width={50} src='./images/testimonial-1.png'/>
+          <img className="nav-link" width={50} src='/images/testimonial-1.png'/>
         </li>
       </ul>
      

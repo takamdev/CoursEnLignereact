@@ -122,7 +122,14 @@
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
          }
-         button {
+         .icone {
+            z-index: 10000;
+            position: absolute;
+            right: 118px;
+            top: 20px;
+            transform: scale(1.5);
+         }
+         button.modalsShow {
             height: 50px;
             position: absolute;
             right: 0;
@@ -150,17 +157,63 @@
    div.banier2Formateurs {
       height: 300px;
       background-color: rgba(233, 232, 226, 0.774);
-      img{
-         @media screen and (max-width:700px) {
+      img {
+         @media screen and (max-width: 700px) {
             display: none;
          }
       }
    }
 }
 
-#blog{
-   button{
-     position: relative;
-     right: 0;
+#blog {
+   button {
+      position: relative;
+      right: 0;
+   }
+}
+#CoursItem {
+  
+  
+   .categirieLine {
+      display: flex;
+      justify-content: space-between;
+      @media screen and (max-width: 600px) {
+         flex-direction: column;
+         justify-content: center;
+         align-items: start;
+      }
+   }
+   article.cours{
+      .nav-item {
+         .nav-link {
+            font-size: 20px;
+            position: relative;
+            display: flex;
+            align-items: end;
+            cursor: pointer;
+            transition: all ease-out 0.5s;
+            color: black;
+            &:hover {
+               color: blueviolet;
+            }
+         }
+         .active {
+            color: blueviolet;
+         }
+
+            .nav-link {
+               width: auto;
+               &:hover {
+                  &::after {
+                     position: absolute;
+                     content: "";
+                     background-color: blueviolet;
+                     height: 3px;
+                     width: inherit;
+                  }
+               }
+            }
+         
+      }
    }
 }

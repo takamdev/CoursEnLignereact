@@ -5,6 +5,8 @@ import Boutique from "./pages/Boutique.jsx"
 import ListCours from "./pages/ListCours.jsx"
 import Formateur from "./pages/Formateur.jsx"
 import Blog from "./pages/Blog.jsx"
+import CoursItem from "./pages/CoursItem.jsx"
+import CoursItemItem from "./pages/CoursItemItem.jsx"
 const root = createBrowserRouter([
   {
     path:"",
@@ -27,6 +29,13 @@ const root = createBrowserRouter([
         path:"/Blog",
         element: <Blog/>
        },
+       {
+        path:"/coursItem/:id",
+        element: <CoursItem/>
+       },{
+        path:"/coursItem/coursItemItem/:id",
+        element: <CoursItemItem/>
+       }
 
     ]
        

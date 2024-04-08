@@ -26,7 +26,7 @@ function filterData(cathegorie){
          <div className="banier1ListCours  d-flex justify-content-center align-items-end mb-5">
             <p className="display-4 text-white fw-bold">Cours</p>
          </div>
-         <select onChange={(e)=>{filterData(e.target.value)}} >
+         <select  className="form-select w-25" aria-label="Default select example" onChange={(e)=>{filterData(e.target.value)}} >
             <option value="">Toutes les cathegories</option>
             <option value="infographie">infographie</option> 
             <option value="ReseauInfo">Reseau Informatique</option>

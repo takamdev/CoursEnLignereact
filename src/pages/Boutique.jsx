@@ -4,8 +4,25 @@ import { data } from "./../../data.js";
 import { Link } from "react-router-dom";
 import Timer from "../components/Timer.jsx";
 import Footer from "../components/Footer.jsx";
+import Modal from "../components/Modals.jsx";
+import Modals from "../components/Modals.jsx";
 
 function Boutique() {
+   const [email, setEmail] = useState("");
+   const [showError, setShowError] = useState(true);
+   function mailError(email) {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let valid = regex.test(email);
+
+      if (valid === true) {
+         setShowError(true);
+         return true;
+      } else {
+         setShowError(false);
+         return false;
+      }
+   }
+
    return (
       <section id="boutique" className="container-fluid">
          <article className="banier1Boutique row">
@@ -175,11 +192,30 @@ function Boutique() {
                pour avoir les offres spéciales <br /> et les cours actualisés
             </p>
             <form className="form d-flex col-lg-6 mb-5 me-sm-1 ms-lg-auto me-lg-auto">
-              <input type="text" placeholder="Adress Email" className="form-control" />
-              <button type="submit" className="btn btn-primary">Enregistrer</button>
+               <p className={`${showError && "d-none"} icone`}>
+                  <i
+                     className={`fa-solid fa-circle-exclamation  text-danger`}
+                  ></i>
+               </p>
+
+               <input
+                  type="text"
+                  value={email}
+                  onChange={(e) => {
+                     setEmail(e.target.value), setShowError(true);
+                  }}
+                  placeholder="Adress Email"
+                  className="form-control"
+               />
+
+               <Modals
+                  labelButton="enregistrer"
+                  validation={mailError}
+                  email={email}
+               />
             </form>
          </article>
-         <Footer/>
+         <Footer />
       </section>
    );
 }
