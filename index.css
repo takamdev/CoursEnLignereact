@@ -103,7 +103,14 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-#boutique .banier2Boutique form button {
+#boutique .banier2Boutique form .icone {
+  z-index: 10000;
+  position: absolute;
+  right: 118px;
+  top: 20px;
+  transform: scale(1.5);
+}
+#boutique .banier2Boutique form button.modalsShow {
   height: 50px;
   position: absolute;
   right: 0;
@@ -135,4 +142,41 @@
 #blog button {
   position: relative;
   right: 0;
+}
+
+#CoursItem .categirieLine {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  #CoursItem .categirieLine {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+}
+#CoursItem article.cours .nav-item .nav-link {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  cursor: pointer;
+  transition: all ease-out 0.5s;
+  color: black;
+}
+#CoursItem article.cours .nav-item .nav-link:hover {
+  color: blueviolet;
+}
+#CoursItem article.cours .nav-item .active {
+  color: blueviolet;
+}
+#CoursItem article.cours .nav-item .nav-link {
+  width: auto;
+}
+#CoursItem article.cours .nav-item .nav-link:hover::after {
+  position: absolute;
+  content: "";
+  background-color: blueviolet;
+  height: 3px;
+  width: inherit;
 }/*# sourceMappingURL=index.css.map */

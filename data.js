@@ -8,6 +8,7 @@ export const data = [
       auteur: "par Leon Dilan",
       prix: "250$",
       categorie: "progInfo",
+      id:1
    },
    {
       img: "/images/PHP.webp",
@@ -18,6 +19,7 @@ export const data = [
       auteur: "par Gustave Gautier",
       prix: "250$",
       categorie: "progInfo",
+      id:2
    },
    {
       img: "/images/adobePre.webp",
@@ -28,6 +30,7 @@ export const data = [
       auteur: "par John Doe",
       prix: "250$",
       categorie: "infographie",
+      id:3
    },
    {
       img: "/images/adobe-after-effects.jpg",
@@ -38,6 +41,7 @@ export const data = [
       auteur: "par Igor Kollo",
       prix: "250$",
       categorie: "infographie",
+      id:4
    },
    {
       img: "/images/canva.webp",
@@ -48,6 +52,7 @@ export const data = [
       auteur: "par Borel David",
       prix: "250$",
       categorie: "infographie",
+      id:5
    },
    {
       img: "/images/flutter.png",
@@ -58,6 +63,7 @@ export const data = [
       auteur: "par Loic Pierre",
       prix: "250$",
       categorie: "progInfo",
+      id:6
    },
    {
       img: "/images/compta2.jpg",
@@ -68,6 +74,7 @@ export const data = [
       auteur: "par Rudy Nathan",
       prix: "250$",
       categorie: "Compta",
+      id:7
    },
    {
       img: "/images/reseau1.jpg",
@@ -78,6 +85,7 @@ export const data = [
       auteur: "par Justin Angu",
       prix: "250$",
       categorie: "ReseauInfo",
+      id:8
    },
    {
       img: "/images/react.png",
@@ -88,6 +96,7 @@ export const data = [
       auteur: "par John Doe",
       prix: "250$",
       categorie: "progInfo",
+      id:9
    },
    {
       img: "/images/react.png",
@@ -98,6 +107,7 @@ export const data = [
       auteur: "par Igor Kollo",
       prix: "250$",
       categorie: "progInfo",
+      id:10
    },
    {
       img: "/images/reactnative.png",
@@ -108,6 +118,7 @@ export const data = [
       auteur: "par Borel David",
       prix: "250$",
       categorie: "progInfo",
+      id:11
    },
    {
       img: "/images/laravel.png",
@@ -118,6 +129,7 @@ export const data = [
       auteur: "par Rudy Nathan",
       prix: "250$",
       categorie: "progInfo",
+      id:12
    },
    {
       img: "/images/MongoDB.jpg",
@@ -128,6 +140,7 @@ export const data = [
       auteur: "par Justin Angu",
       prix: "250$",
       categorie: "progInfo",
+      id:13
    },
   
    
@@ -142,6 +155,7 @@ export const data = [
       auteur: "par Igor Kollo",
       prix: "250$",
       categorie: "infographie",
+      id:14
    },
   
  
@@ -154,6 +168,7 @@ export const data = [
       auteur: "par Leon Dilan",
       prix: "250$",
       categorie: "Compta",
+      id:15
    },
    {
       img: "/images/compta3.jpg",
@@ -164,6 +179,7 @@ export const data = [
       auteur: "par john Doe",
       prix: "250$",
       categorie: "Compta",
+      id:16
    },
    {
       img: "/images/sage.jfif",
@@ -174,6 +190,7 @@ export const data = [
       auteur: "par Igor Kollo",
       prix: "250$",
       categorie: "Compta",
+      id:17
    },
   
    {
@@ -185,6 +202,7 @@ export const data = [
       auteur: "par Leon Dilan",
       prix: "250$",
       categorie: "ReseauInfo",
+      id:18
    },
    {
       img: "/images/reseau2.jpg",
@@ -195,6 +213,7 @@ export const data = [
       auteur: "par John Doe",
       prix: "250$",
       categorie: "ReseauInfo",
+      id:19
    },
    {
       img: "/images/reseau3.jpg",
@@ -205,5 +224,6 @@ export const data = [
       auteur: "par Igor Kollo",
       prix: "250$",
       categorie: "ReseauInfo",
+      id:20
    },
 ];
