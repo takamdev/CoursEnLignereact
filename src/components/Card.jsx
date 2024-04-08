@@ -2,9 +2,15 @@ import React from "react";
 
 import "./cart.css";
 function Card({produit}) {
+
+function redirection(){
+   window.location.href=`/coursItem/${produit.id}`
+}
+
+
    return (
       <div className="card p-0 mb-3 w-auto">
-         <img src={produit.img} className="card-img-top w-auto" 
+         <img src={produit.img} onClick={redirection} className="card-img-top w-auto" style={{cursor:"pointer"}}
           alt="image" />
          <div className="card-body">
             <h5 className="card-title text-warning">
@@ -21,7 +27,7 @@ function Card({produit}) {
             <h4 className="card-title">{produit.descCours}</h4>
 
             <p className="card-title">
-               <img
+               <img 
                   src={produit.imgAuteur}
                   className="rounded-circle"
                   width={45}
