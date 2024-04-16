@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { MdOutlineMenuBook } from "react-icons/md"; 
 import { Link, NavLink } from 'react-router-dom'
 import { useStore } from '../../Store.js'
 import Cart from './Cart.jsx'
@@ -12,10 +12,10 @@ function NavBars() {
     <>
      <nav id='navbar' className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
   <div className="container-fluid">
-    <Link className="navbar-brand ms-3" onClick={hide} to="/"><img src="/images/logo.png" width={50} alt="image" /></Link>
+    <Link  className="navbar-brand ms-3" onClick={hide} to="/"><img src="/images/logo.png" width={50} alt="image" /></Link>
    
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
+    <button className="btn border-0 d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <MdOutlineMenuBook transform="scale(3)" color="red" />
     </button>
     <div className={`collapse navbar-collapse `} id="navbarSupportedContent">
     <form className="d-flex ms-lg-5" role="search">
