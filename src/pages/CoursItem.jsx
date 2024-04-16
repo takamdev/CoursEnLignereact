@@ -91,7 +91,8 @@ function CoursItem() {
                      25%
                   </div>
                </div>
-               <button
+              <div className="vstack">
+              <button
                onClick={redirection}
                   type="button"
                   className="btn btn-primary col-sm-4 col-lg-12 col-md-12 ps-0 pe-0  pt-2 pb-2 mt-4"
@@ -104,6 +105,7 @@ function CoursItem() {
                >
                   Cours Complets
                </button>
+              </div>
                <div className="mt-3">
                   <p className="opacity-50 fs-5 mb-0">
                      <i className="fa-solid fa-hand"></i>Ce Cours a été

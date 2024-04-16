@@ -5,7 +5,7 @@ function CoursItemItem() {
    <section id='coursItemItem' className='container-fluid'>
     <article className='row mt-3 h-auto'>
     <p className="fs-5 fw-bolder">contenur du cours</p>
-     <div className="col-4 m-0 p-0">
+     <div className="col-lg-4 col-md-4 col-sm-12 m-0 p-0">
         
         <div className="accordion col-lg-12" id="accordionExample">
             <div className="accordion-item">
@@ -155,9 +155,9 @@ function CoursItemItem() {
             </div>
          </div>
      </div>
-     <div className="col-8 m-0">
+     <div className="col-lg-8 col-md-8 col-sm-12 m-0">
 
-     <iframe width="100%" height="555" className="videoYoutube" src="https://www.youtube.com/embed/s79WQiJaknc?si=x4-JzndGrpQEPZo1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <iframe width="100%" height="505" className="videoYoutube" src="https://www.youtube.com/embed/s79WQiJaknc?si=x4-JzndGrpQEPZo1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
      </div>
     </article>

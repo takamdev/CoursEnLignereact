@@ -27,6 +27,11 @@
   height: 3px;
   width: 100%;
 }
+@media screen and (max-width: 990px) {
+  #navbar ul .nav-item:nth-child(1) .nav-link:hover::after, #navbar ul .nav-item:nth-child(2) .nav-link:hover::after {
+    display: none;
+  }
+}
 #navbar form {
   position: relative;
 }
@@ -104,7 +109,7 @@
   border-bottom-right-radius: 20px;
 }
 #boutique .banier2Boutique form .icone {
-  z-index: 10000;
+  z-index: 1000;
   position: absolute;
   right: 118px;
   top: 20px;
