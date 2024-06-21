@@ -9,5 +9,11 @@ export const useStore = create((set) => {
     set(() => ({ produit: [...Produit] }))
     localStorage.setItem("produit",JSON.stringify([...Produit]))
   },
+  addProduit:(produit)=>{
+     set((state) => {
+        localStorage.setItem("produit",JSON.stringify([...state.produit,{...produit,qte:1}]))
+      return { produit: [...state.produit,{...produit,qte:1}] }
+     })
+  }
   }
 })
