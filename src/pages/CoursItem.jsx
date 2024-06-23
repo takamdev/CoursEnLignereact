@@ -35,7 +35,6 @@ function CoursItem() {
       let lien = document.querySelector('.link');
       lien.select()
       document.execCommand("copy");
-      alert('success')
       
    }
    return (
@@ -72,7 +71,7 @@ function CoursItem() {
          </div>
          <article className="mt-3 row">
             <div className="col-sm-12 col-md-9 ">
-            <iframe width="100%" height="555" className="videoYoutube" src="https://www.youtube.com/embed/s79WQiJaknc?si=x4-JzndGrpQEPZo1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="100%" height="555" className="videoYoutube" src="https://www.youtube.com/embed/VZLflMqC6dI?si=0GsmG-HfFKB1zix9" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div className="col-sm-12 col-md-3 ps-lg-5">
                <p className="fs-4 fw-bold w-100">Progression du Cours</p>
@@ -584,36 +583,40 @@ function CoursItem() {
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-            <div className="text-center">
-               <div className="row  mt-3 mb-3 container-fluid">
-                  <p className="col">
-                  <i style={{transform:"scale(3)"}}  className="fa-solid fa-code mb-3"></i>
-                  Integrer
-                  </p>
-                  <p className="col">
-                  <i style={{transform:"scale(3)"}} className="fa-brands fa-whatsapp  mb-3"></i>
-                  Whatsapp
-                  </p>
-                  <p className="col ">
-                  <i style={{transform:"scale(3)"}} className="fa-brands fa-facebook  mb-3"></i>
-                  Facebook
-                  </p>
-                  <p className="col position-relative">
-                  <i style={{transform:"scale(3)"}} className="fa-brands fa-x-twitter"></i>
-                  <span className="position-absolute" style={{right:"35px",bottom:"0",transform:"scale(1.3)"}}>X</span>        
-                  </p>
-                  <p className="col position-relative">
-                  <i style={{transform:"scale(3)"}} className="fa-solid fa-envelope"></i>
-                  <span className="position-absolute" style={{right:"20px",bottom:"0"}}>Email</span>           
-                  </p>
+            <div className="text-center ">
+               <div className="row   mt-3 mb-3">
+                  <div className="col">
+                    <p className="d-flex flex-column">
+                        <i style={{transform:"scale(3)"}}  className="fa-solid fa-code mb-3"></i>
+                        <span>Integrer</span>
+                    </p>
+                  </div>
+                  <div className="col">
+                    <p className="d-flex flex-column">
+                        <i style={{transform:"scale(3)"}} className="fa-brands fa-whatsapp  mb-3"></i>
+                        <span>Whatsapp</span>
+                    </p>
+                  </div>
+                  <div className="col ">
+                    <p className="d-flex flex-column">
+                        <i style={{transform:"scale(3)"}} className="fa-brands fa-x-twitter  mb-3"></i>
+                        <span>X</span>
+                    </p>
+                  </div>
+                  <div className="col ">
+                    <p className="d-flex flex-column">
+                        <i style={{transform:"scale(3)"}} className="fa-solid fa-envelope  mb-3"></i>
+                        <span>Email</span>
+                    </p>
+                  </div>
                </div>
             </div>
 
             <div className="row">
-            <div className="col-8 ms-2">
+            <div className="col-8">
             <input className="form-control link" value={youbLink} type="text"/>
             </div>
-               <button className="btn btn-primary col-2 ms-auto me-4" onClick={()=>{copyToClipboard()}}>copier</button>
+               <button className="btn btn-primary col-4 ms-auto " onClick={()=>{copyToClipboard()}}>copier</button>
             </div>
             </div>
          

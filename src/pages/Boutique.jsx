@@ -38,13 +38,14 @@ function Boutique() {
                   <Link
                   to="/ListCours"
                      type="button"
-                     className="btn btn-primary rounded-pill  pt-lg-3 pb-lg-3 ps-lg-3"
+                     className="btn btn-primary rounded-pill w-auto  pt-lg-3 pb-lg-3 ps-lg-3"
                   >
                      Explorez Nos Cours
                   </Link>
                   <Link
                      type="button"
-                     className="btn btn-outline-warning rounded-pill pt-lg-3 ms-3 pb-lg-3 startCourse"
+                     to="/coursItem/2"
+                     className="btn btn-outline-warning w-auto rounded-pill pt-lg-3 ms-3 pb-lg-3 startCourse"
                   >
                      Commencer le cours{" "}
                      <span className="arrows">
