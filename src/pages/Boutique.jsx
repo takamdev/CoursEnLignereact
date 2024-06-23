@@ -35,13 +35,14 @@ function Boutique() {
                   nouvautés chaque mois
                </p>
                <p className=" mt-5 d-flex justify-content-center">
-                  <button
+                  <Link
+                  to="/ListCours"
                      type="button"
                      className="btn btn-primary rounded-pill  pt-lg-3 pb-lg-3 ps-lg-3"
                   >
                      Explorez Nos Cours
-                  </button>
-                  <button
+                  </Link>
+                  <Link
                      type="button"
                      className="btn btn-outline-warning rounded-pill pt-lg-3 ms-3 pb-lg-3 startCourse"
                   >
@@ -49,7 +50,7 @@ function Boutique() {
                      <span className="arrows">
                         <i className="fa-solid fa-arrow-right"></i>
                      </span>
-                  </button>
+                  </Link>
                </p>
             </div>
             <div className="col-6 imgBanier d-md-block">

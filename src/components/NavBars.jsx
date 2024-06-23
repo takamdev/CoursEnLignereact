@@ -38,16 +38,24 @@ function NavBars() {
             <li><Link className="dropdown-item" onClick={hide} to="/Blog">Blog</Link></li>
           </ul>
         </li>
-        <li className="nav-item">
+        <li className="nav-item navDisplayLG">
           <a className="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" href="#"><i style={{color:"#0b5ed7"}} className="fa-solid fa-cart-shopping"></i>(<span className='count'>{produit.length}</span>)</a>
         </li>
-        <li className="nav-item">
+        <li className="nav-item navDisplayLG">
           <img className="nav-link" width={50} src='/images/testimonial-1.png'/>
         </li>
       </ul>
      
     </div>
+        
+       <p className="displaysm d-none">
+          <a className="nav-link fs-3 navDisplaysm" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" href="#"><i style={{color:"#0b5ed7"}} className="fa-solid fa-cart-shopping"></i>(<span className='count'>{produit.length}</span>)</a>
+
+          <img className="nav-link navDisplaysm" width={40} src='/images/testimonial-1.png'/>
+       </p>
+      
   </div>
+        
     </nav>
 
    <div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -56,7 +64,14 @@ function NavBars() {
       <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div className="offcanvas-body">
-      <Cart/>
+      {
+        produit.length ===0 ?(
+          <p>aucun produit dans le panier</p>
+        ):(
+          <Cart/>
+        )
+      }
+    
     </div>
   </div>
     </>

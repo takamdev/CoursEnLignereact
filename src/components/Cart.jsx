@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useStore } from '../../Store.js'
 import { FaMinus, FaPlus, FaTrash } from 'react-icons/fa';
 import { toast } from 'sonner';
@@ -5,6 +6,10 @@ import { toast } from 'sonner';
 function Cart() {
     const getListProduit = useStore((state)=>state.produit)
     const updateProduit = useStore((state)=>state.updateProduit)
+    const produit = useStore((state)=>state.produit)
+
+
+
 
     const addQte = (id)=>{
       const newList = getListProduit.map(item=>{
@@ -47,9 +52,24 @@ function Cart() {
     let newList=  getListProduit.filter(item=>item.id!==id)
     updateProduit(newList)
     }
+
+    const commande = ()=>{
+     toast.success("commande reussir!",{className:"text-primary fs-6"})
+     updateProduit([])
+    }
   return (
-    <div className="row d-flex justify-content center mt-3">
-               <div className="col-lg-9">
+    <div className="row d-flex justify-content-center mt-3">
+               <div className="col">
+                  <div className="row">
+                  <p className="col-8 fs-3">Total:{
+                   produit.reduce((some,item)=>{
+                     const prix = item.prix.replace("$","")
+                     return some+(item.qte*prix)
+                    },0)
+                     }</p>
+                  <button className='btn btn-primary col-4 h-25' onClick={commande}>Commander</button>
+                  </div>
+                   
                   <div className="table-responsive">
                      <table className="table">
                         <thead>
@@ -66,7 +86,7 @@ function Cart() {
                               return (
                                  <tr key={index}>
                                     <th scope="row">{item.descCours}</th>
-                                    <td>{item.prix} FCFA</td>
+                                    <td>{item.prix}</td>
                                     <td>{item.categorie}</td>
                                     <td>
                                        <img
@@ -78,7 +98,7 @@ function Cart() {
                                        />
                                     </td>
                                     <td>
-                                       <div className="hstack gap-1">
+                                       <div className="hstack gap-1 mt-2">
                                           <button
                                              className="btn btn-primary"
                                              onClick={() => addQte(item.id)}
@@ -96,7 +116,7 @@ function Cart() {
                                     </td>
                                     <td>
                                        <button
-                                          className="btn btn-danger"
+                                          className="btn btn-danger mt-2"
                                           onClick={() => delPro(item.id)}
                                        >
                                           <FaTrash />
@@ -108,6 +128,8 @@ function Cart() {
                         </tbody>
                      </table>
                   </div>
+
+                 
                </div>
             </div>
   )
