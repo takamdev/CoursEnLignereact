@@ -6,6 +6,20 @@
   font-style: normal;
 }
 
+@media screen and (max-width: 990px) {
+  #navbar .navDisplayLG {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 990px) {
+  #navbar .displaysm {
+    display: flex !important;
+    position: absolute;
+    top: 33px;
+    gap: 15px;
+    right: 80px;
+  }
+}
 #navbar ul .nav-item .nav-link {
   font-size: 20px;
   position: relative;
