@@ -5,9 +5,10 @@ export const data = [
       descCours: "Cours Sur JavaScript",
       point: "4.20",
       vue: "2",
+      video:"VZLflMqC6dI",
       auteur: "par Leon Dilan",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:1
    },
    {
@@ -16,9 +17,10 @@ export const data = [
       descCours: "Cours Sur PHP",
       point: "5.00",
       vue: "1",
+      video:"cWoq5znh0vw",
       auteur: "par Gustave Gautier",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:2
    },
    {
@@ -27,6 +29,7 @@ export const data = [
       imgAuteur: "/images/testimonial-1.png",
       point: "5.00",
       vue: "1",
+      video:"vvAKDG7O0Dw",
       auteur: "par John Doe",
       prix: "250$",
       categorie: "infographie",
@@ -38,6 +41,8 @@ export const data = [
       descCours: "Cours  Sur After Effect",
       point: "5.00",
       vue: "1",
+      video:"ztovWifWjYk",
+
       auteur: "par Igor Kollo",
       prix: "250$",
       categorie: "infographie",
@@ -49,6 +54,8 @@ export const data = [
       descCours: "Cours  Sur Canvas",
       point: "5.00",
       vue: "1",
+      video:"iaNQXchO0",
+
       auteur: "par Borel David",
       prix: "250$",
       categorie: "infographie",
@@ -60,9 +67,10 @@ export const data = [
       descCours: "Cours  Sur Flutter",
       point: "5.00",
       vue: "1",
+      video:"LmtmnKDrmFY",
       auteur: "par Loic Pierre",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:6
    },
    {
@@ -71,9 +79,11 @@ export const data = [
       descCours: "Cours  Sur La Comtabilité",
       point: "5.00",
       vue: "1",
+      video:"_907ZokfcwY",
+
       auteur: "par Rudy Nathan",
       prix: "250$",
-      categorie: "Compta",
+      categorie: "Contabilité et Gestion",
       id:7
    },
    {
@@ -82,9 +92,11 @@ export const data = [
       descCours: "Cours  Reseau Informatique",
       point: "5.00",
       vue: "1",
+      video:"3wpgq8UkG3Q",
+
       auteur: "par Justin Angu",
       prix: "250$",
-      categorie: "ReseauInfo",
+      categorie: "Reseau Informatique",
       id:8
    },
    {
@@ -93,20 +105,24 @@ export const data = [
       descCours: "Cours Sur React JS",
       point: "5.00",
       vue: "1",
+      video:"hhe6Xb4Em5U",
+
       auteur: "par John Doe",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:9
    },
    {
-      img: "/images/react.png",
+      img: "/images/node.webp",
       imgAuteur: "/images/testimonial-1.png",
       descCours: "Cours Sur NODE JS",
       point: "5.00",
       vue: "1",
+      video:"k7sn7dBh4eQ",
+
       auteur: "par Igor Kollo",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:10
    },
    {
@@ -115,9 +131,11 @@ export const data = [
       descCours: "Cours  Sur React Native",
       point: "5.00",
       vue: "1",
+      video:"tSpA7XaDIaY",
+
       auteur: "par Borel David",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:11
    },
    {
@@ -126,9 +144,11 @@ export const data = [
       descCours: "Cours sur LARAVEL",
       point: "5.00",
       vue: "1",
+      video:"dxt7w5NUub8",
+
       auteur: "par Rudy Nathan",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:12
    },
    {
@@ -137,9 +157,11 @@ export const data = [
       descCours: "Cours Sur MONGO DB",
       point: "5.00",
       vue: "1",
+      video:"ugdQjSn63e8",
+
       auteur: "par Justin Angu",
       prix: "250$",
-      categorie: "progInfo",
+      categorie: "Programmation Informatique",
       id:13
    },
   
@@ -154,6 +176,8 @@ export const data = [
       vue: "1",
       auteur: "par Igor Kollo",
       prix: "250$",
+      video:"mOixLjMOJb4",
+
       categorie: "infographie",
       id:14
    },
@@ -165,9 +189,11 @@ export const data = [
       descCours: "Cours  Sur La Finance",
       point: "4.20",
       vue: "2",
+      video:"JWLz8d_Yq0g",
+
       auteur: "par Leon Dilan",
       prix: "250$",
-      categorie: "Compta",
+      categorie: "Contabilité et Gestion",
       id:15
    },
    {
@@ -177,8 +203,10 @@ export const data = [
       point: "5.00",
       vue: "1",
       auteur: "par john Doe",
+      video:"m5Iwd6n6iyI",
+
       prix: "250$",
-      categorie: "Compta",
+      categorie: "Contabilité et Gestion",
       id:16
    },
    {
@@ -187,9 +215,11 @@ export const data = [
       descCours: "Cours Sur SAGE SAARI",
       point: "5.00",
       vue: "1",
+      video:"D0i7X13_0u0",
+
       auteur: "par Igor Kollo",
       prix: "250$",
-      categorie: "Compta",
+      categorie: "Contabilité et Gestion",
       id:17
    },
   
@@ -199,9 +229,11 @@ export const data = [
       descCours: "Cours Securité Info..",
       point: "4.20",
       vue: "2",
+      video:"rDFvpXiz3X0",
+
       auteur: "par Leon Dilan",
       prix: "250$",
-      categorie: "ReseauInfo",
+      categorie: "Reseau Informatique",
       id:18
    },
    {
@@ -210,9 +242,11 @@ export const data = [
       descCours: "Cours Sur le LAN",
       point: "5.00",
       vue: "1",
+      video:"rDFvpXiz3X0",
+
       auteur: "par John Doe",
       prix: "250$",
-      categorie: "ReseauInfo",
+      categorie: "Reseau Informatique",
       id:19
    },
    {
@@ -221,9 +255,11 @@ export const data = [
       descCours: "Cours Sur CISCO",
       point: "5.00",
       vue: "1",
+      video:"OKXlgAPVJ8Y",
+
       auteur: "par Igor Kollo",
       prix: "250$",
-      categorie: "ReseauInfo",
+      categorie: "Reseau Informatique",
       id:20
    },
 ];

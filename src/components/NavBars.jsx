@@ -1,12 +1,27 @@
 import { MdOutlineMenuBook } from "react-icons/md"; 
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import { useStore } from '../../Store.js'
 import Cart from './Cart.jsx'
-
+import { useState } from "react";
+import { data } from "../../data.js";
+import { toast } from "sonner";
 function NavBars() {
   const produit = useStore((state)=>state.produit)
+  const [valueSearch,setValueSearch]=useState("")
+  const navigateTo = useNavigate()
   const hide = ()=>{
     document.querySelector('#navbarSupportedContent').classList.remove('show')
+  }
+
+  const search = (value)=>{
+      const course = data.find(item=>{
+        const keyWord= item.descCours.toUpperCase().split(' ').includes(value.toUpperCase())
+        if(keyWord) return item
+           else return null
+      })
+
+       if(course!==null) navigateTo(`/coursItem/${course.id}`)
+        else toast.warning('aucun cours trouvez a ce titre',{className:"text-danger"})
   }
   return (
     <>
@@ -19,8 +34,8 @@ function NavBars() {
     </button>
     <div className={`collapse navbar-collapse `} id="navbarSupportedContent">
     <form className="d-flex ms-lg-5" role="search">
-        <input className="form-control me-2" type="search" placeholder="Nom Du Cours..." aria-label="Search"  />
-        <i className='fa-solid fa-magnifying-glass search icoSearch'></i>
+        <input value={valueSearch} onChange={(e)=>setValueSearch(e.target.value)} className="form-control me-2" type="search" placeholder="Nom Du Cours..." aria-label="Search"  />
+         <p onClick={()=>search(valueSearch)} role="button"> <i  className='fa-solid fa-magnifying-glass search icoSearch'></i></p>
       </form>
       <ul className="navbar-nav ms-auto me-3 gap-lg-5 mb-2 mb-lg-0">
         <li className="nav-item">

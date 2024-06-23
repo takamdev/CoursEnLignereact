@@ -10,8 +10,8 @@ function filterData(cathegorie){
     setDataFilter(data)
    }else{
     let   filterResul = data.filter((item)=>{
-      console.log(item);
-      return item.categorie===cathegorie
+
+      return item.categorie.toUpperCase()===cathegorie.toUpperCase()
     })
     setDataFilter(filterResul)
    }
@@ -29,9 +29,9 @@ function filterData(cathegorie){
          <select  className="form-select w-25" aria-label="Default select example" onChange={(e)=>{filterData(e.target.value)}} >
             <option value="">Toutes les cathegories</option>
             <option value="infographie">infographie</option> 
-            <option value="ReseauInfo">Reseau Informatique</option>
-            <option value="Compta">Contabilité et Gestion</option>
-            <option value="progInfo">Programmation Informatique</option> 
+            <option value="Reseau Informatique">Reseau Informatique</option>
+            <option value="Contabilité et Gestion">Contabilité et Gestion</option>
+            <option value="Programmation Informatique">Programmation Informatique</option> 
          </select>
          <article className="row mt-5  justify-content-center align-items-center">
             {dataFilter.map((item, key) => {

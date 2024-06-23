@@ -2,19 +2,26 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import { useNavigate  } from 'react-router-dom';
+import { data } from "../../data.js";
 function CoursItem() {
    const { id } = useParams();
+   const [course,setCourse] = useState({})
    const [hide, setHide] = useState(true);
    const [signe, setSigne] = useState("+");
    const [label, setLabel] = useState("lire plus");
    const [youbLink , setYoubLink] = useState('')
    const navigateTo = useNavigate()
      useEffect(()=>{
+      const cours = data.find(item=>item.id==id)
+      setCourse(cours)
+     },[])
+
+     const share = ()=>{
       let video = document.querySelector('.videoYoutube').getAttribute("src")
       let indexDeFin = video.lastIndexOf('?')
       let youtubeLink = video.slice(0,indexDeFin).replace('be.com/embed/','.be/').replace('www.','')
        setYoubLink(youtubeLink)
-     },[])
+     }
    const visible = () => {
       if (hide) {
          setHide(false);
@@ -53,25 +60,25 @@ function CoursItem() {
                </t>
             </span>
          </p>
-         <p className="ms-0 fs-3 fw-bold">cours complet sur java script</p>
+         <p className="ms-0 fs-3 fw-bold">{course.descCours}</p>
 
          <div className="categirieLine">
             <p className="fs-5 fw-bold">
-               <span className="opacity-50">categorie</span> developpement web
+               <span className="opacity-50">categorie</span> {course.categorie}
             </p>
             <p className=" fs-5 hstack gap-4">
                <span>
                   <i className="fa-solid fa-bookmark"></i> Whislist
                </span>
-               <span style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  {" "}
+               <span onClick={share} style={{cursor:"pointer"}} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  {" "} 
                   <i className="fa-solid fa-share"></i> Partager
                </span>
             </p>
-         </div>
+         </div>                                            
          <article className="mt-3 row">
             <div className="col-sm-12 col-md-9 ">
-            <iframe width="100%" height="555" className="videoYoutube" src="https://www.youtube.com/embed/VZLflMqC6dI?si=0GsmG-HfFKB1zix9" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="100%" height="555" className="videoYoutube" src={`https://www.youtube.com/embed/${course.video}?si=0GsmG-HfFKB1zix9`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <div className="col-sm-12 col-md-3 ps-lg-5">
                <p className="fs-4 fw-bold w-100">Progression du Cours</p>
@@ -579,7 +586,7 @@ function CoursItem() {
       <div className="modal-dialog modal-dialog-centered">
          <div className="modal-content bg-dark text-white">
             <div className="modal-header">
-            <h1 className="modal-title fs-5" id="exampleModalLabel">Partager</h1>
+            <h1 className="modal-title fs-5"  id="exampleModalLabel">Partager</h1>
             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
